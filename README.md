@@ -560,6 +560,14 @@ Package manager and public registry for reusable AI skills, prompts, rules, MCP 
 - **Backends:** Claude Code, Codex, Copilot, Cursor, Windsurf, Cline, Aider and Continue
 - **Edge:** One shared config plus persistent cross-session memory, prompts and skills serve all of these assistants from a single directory, instead of maintaining each tool's setup separately.
 
+### [Archcore](https://github.com/archcore-ai/archcore)
+`Go` · `Apache-2.0` · CLI + MCP server + agent plugin · 🟡 active
+
+Git-native context engineering and spec-driven development for AI coding agents.
+
+- **Backends:** Claude Code, Codex, Cursor and GitHub Copilot
+- **Edge:** The CLI keeps specs, architecture decisions, rules, plans, and project knowledge in `.archcore/`, versioned with your code, and serves the relevant context to coding agents through MCP and integrations.
+
 ---
 
 ## Model Context Protocol (MCP)
