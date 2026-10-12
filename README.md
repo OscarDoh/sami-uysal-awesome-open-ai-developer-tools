@@ -977,6 +977,13 @@ Train transformer models with reinforcement learning — SFT, DPO, GRPO, reward 
 
 - **Edge:** The standard path from a base model to an aligned, instruction-following one.
 
+### [Fuuga](https://bitbucket.org/thorium/fuuga)
+`F#` · `Unlicense` · `Library + CLI` · 🟡 active
+
+Builds, pre-trains, fine-tunes and serves LLMs in F#/.NET on TorchSharp, with no Python.
+
+- **Edge:** One typed .NET codebase covers the whole pipeline (BPE tokenizer, ingestion, pre-training, LoRA/QLoRA/DPO/GRPO, donor-weight import from Hugging Face safetensors and GGUF, RAG, GGUF export for llama.cpp/Ollama) on CPU or CUDA, so a .NET shop can train and run models offline without a Python stack.
+
 ---
 
 ## Evals, Testing & Guardrails
