@@ -560,6 +560,14 @@ Package manager and public registry for reusable AI skills, prompts, rules, MCP 
 - **Backends:** Claude Code, Codex, Copilot, Cursor, Windsurf, Cline, Aider and Continue
 - **Edge:** One shared config plus persistent cross-session memory, prompts and skills serve all of these assistants from a single directory, instead of maintaining each tool's setup separately.
 
+### [aident-skill](https://github.com/Aident-AI/aident-skill)
+`Shell` · `MIT` · Agent skill + CLI · 🟡 active
+
+Installable agent skill and CLI (`@aident-ai/cli`) that teach coding agents to use [Aident Loadout](https://aident.ai) for connected work apps and 400+ ready-made Skills. The skill and CLI are MIT; the Loadout service they call is proprietary (freemium, pay-as-you-go).
+
+- **Backends:** Codex, Claude Code, Cursor, OpenCode, OpenClaw and other MCP clients
+- **Edge:** One CLI command installs a single canonical skill copy and repairs every detected filesystem-backed agent host, so all assistants on a machine share the same connected accounts. Credentials stay in a vault (agents receive results, not raw keys), and every action call lands in an audit log.
+
 ---
 
 ## Model Context Protocol (MCP)
