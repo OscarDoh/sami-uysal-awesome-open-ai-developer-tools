@@ -100,6 +100,15 @@ Agents that do what a developer does — modify code, run commands, browse the w
 - **Backends:** Anything LiteLLM supports
 - **Edge:** Real sandboxed execution (Docker) rather than a chat that pretends to run things. Headless and CLI modes make it scriptable in CI.
 
+### [PatchPilot](https://github.com/harshitethic/PatchPilot)
+`Python` · `MIT` · Local web UI · 🟠 experimental
+
+Local-first coding agent that plans changes, applies guarded edits, runs approved tests in disposable Docker containers, and produces reviewable Git diffs.
+
+- **Replaces:** Hosted coding-agent experiments for basic local edit-and-review workflows; not a feature-for-feature replacement for mature agents
+- **Backends:** Local Ollama, OpenAI-compatible endpoints, OpenRouter
+- **Edge:** Test execution fails closed without an approved offline Docker image instead of running project scripts on the host. It also bounds Git output, checks staged changes for recognizable secrets, and documents the remaining host-side isolation risks.
+
 ### [SWE-agent](https://github.com/SWE-agent/SWE-agent)
 `Python` · `MIT` · CLI · 🟡 active
 
