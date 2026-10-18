@@ -627,7 +627,7 @@ Shared project context and semantic code search over MCP for AI coding agents.
 - **Backends:** local OSS server (`@contextstream/mcp-server`) or hosted remote MCP (`https://mcp.contextstream.io/mcp`)
 - **Edge:** shared project context across MCP clients not locked to one editor
 
-### [mcpdoctor](https://github.com/xka0085-byte/mcp-doctor)
+### [mcpreflight](https://github.com/xka0085-byte/mcpreflight)
 `JavaScript` · `MIT` · CLI · 🟠 experimental
 
 Read-only preflight inspector and linter for MCP tool schemas and x402 HTTP payment-required endpoints with GitHub Actions CI support.
