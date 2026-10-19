@@ -635,6 +635,14 @@ Read-only preflight inspector and linter for MCP tool schemas and x402 HTTP paym
 - **Replaces:** Manual curl inspection, ad-hoc JSON schema validation for MCP endpoints
 - **Edge:** Runs zero-dependency preflight checks without credentials, verifying discovery manifests (`/.well-known/mcp/server.json`) and SHA-256 body digests before clients or payment buyers connect.
 
+### [Folio Wiki](https://github.com/evergreen-it-dev/folio)
+`TypeScript` · `MIT` · Self-hosted / Docker + MCP · 🟡 active
+
+Team wiki whose pages are Markdown files in a Git repository, with a built-in MCP server that lets coding agents search, read and edit pages, data tables and whiteboards.
+
+- **Replaces:** Confluence and Notion as the place where an agent finds team conventions, runbooks and decisions
+- **Edge:** The MCP server ships inside the app (Streamable HTTP, OAuth 2.1 or a personal access token) and acts with the signed-in user's rights. Agent edits land in Git history under that user's name, so they can be reviewed and reverted like any commit.
+
 ---
 
 ## Local Inference Engines
