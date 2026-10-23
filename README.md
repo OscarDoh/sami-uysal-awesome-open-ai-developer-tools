@@ -604,6 +604,13 @@ Local MCP bridge that lets an existing ChatGPT conversation operate the Mac wher
 
 - **Edge:** ChatGPT stays the reasoning layer and the bridge makes no model calls. Unlike a narrow filesystem or shell MCP, it is deliberately built for developer-machine parity and real interactive terminals. **Security tradeoff:** it is intentionally not sandboxed and runs with the macOS user's effective permissions, so it is only appropriate when that level of machine access is explicitly wanted.
 
+### [Oh My Android](https://github.com/ateymoori/oh-my-android)
+`Swift` · `MIT` · macOS app / MCP · 🟡 active
+
+Native macOS control panel for the Android Emulator and adb devices, with a built-in stdio MCP server that lets coding agents see and drive the device.
+
+- **Edge:** `screenshot` is scaled to 1 px = 1 dp and `get_ui` returns a compact UI tree with refs (about 10× smaller than raw `uiautomator` XML), so positions match layout code and the agent can tap by ref. The same 18 tools switch dark mode, font scale, locale/RTL, TalkBack and network, and read logcat, SharedPreferences and SQLite, on emulators and USB or Wi-Fi phones; the server is one native binary with no runtime dependencies and no network access. **Known limit:** macOS 26+ on Apple silicon only.
+
 ### [Screenpipe](https://github.com/screenpipe/screenpipe)
 `Rust + TypeScript` · `Screenpipe Commercial License` (source-available, not OSI) · Desktop + MCP + local API · 🟡 active
 
