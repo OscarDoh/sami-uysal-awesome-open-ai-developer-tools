@@ -1187,6 +1187,14 @@ Whisper plus word-level timestamps and speaker diarization.
 
 - **Edge:** If you need to know *who* said *what, when* — subtitles, meeting notes — this is the one.
 
+### [Yap MCP](https://github.com/founden-bot/yap-mcp)
+`JavaScript` · `MIT` · MCP server + CLI · 🟠 experimental
+
+Local MCP server and CLI that transcribes audio and video files on your own computer with NVIDIA Parakeet TDT v3 through sherpa-onnx, so a coding agent can read a recording without a speech API.
+
+- **Replaces:** cloud speech-to-text APIs (AssemblyAI, Google Speech-to-Text) for agent transcription tasks
+- **Edge:** Runs from `npx` on the CPU with no API key, account or upload, and one multilingual model covers 25 European languages with automatic language detection. **Known weakness:** the first run downloads a model of about 670 MB, and its `search_dictations` tool only returns data when the closed-source Yap desktop app is installed.
+
 ### [Kokoro](https://github.com/hexgrad/kokoro) / [Piper](https://github.com/OHF-Voice/piper1-gpl)
 `Apache-2.0` / `GPL-3.0` · 🟢 stable
 
