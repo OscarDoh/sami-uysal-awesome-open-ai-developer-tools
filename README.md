@@ -239,6 +239,15 @@ Self-hosted AI pull request reviewer for GitHub, Forgejo and Gitea that scores e
 - **Backends:** Local GGUF models via a managed llama.cpp runtime, Anthropic, OpenAI, OpenRouter, MiniMax
 - **Edge:** Scores and pass/fail gates can come from a separate typed-answer model rather than parsed prose, so merge gates don't depend on LLM formatting. Runs fully offline, reads the repo's `AGENTS.md`/`CLAUDE.md`, and works with self-hosted Forgejo and Gitea, not only GitHub.
 
+### [workkit](https://github.com/ITW-Creative-Works/workkit)
+`JavaScript + Shell` · `FSL-1.1-MIT` (source-available, not OSI) · Claude Code plugin + CLI · 🟡 active
+
+Claude Code plugin that runs GitHub Issues as the work pipeline: each issue moves through labeled stages from spec to build, QA and ship.
+
+- **Replaces:** Ad-hoc chat-driven coding sessions and hand-kept task lists
+- **Backends:** Claude Code (Anthropic)
+- **Edge:** The chat acts as a manager that dispatches worker subagents for code and tests plus a verifier that reviews both without seeing how they were made. Hooks block a code commit until the full test suite has passed on exactly what is being committed, and finished work waits uncommitted for the human to try it.
+
 ---
 ## Prompt-to-App Builders
 
