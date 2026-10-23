@@ -239,6 +239,15 @@ Self-hosted AI pull request reviewer for GitHub, Forgejo and Gitea that scores e
 - **Backends:** Local GGUF models via a managed llama.cpp runtime, Anthropic, OpenAI, OpenRouter, MiniMax
 - **Edge:** Scores and pass/fail gates can come from a separate typed-answer model rather than parsed prose, so merge gates don't depend on LLM formatting. Runs fully offline, reads the repo's `AGENTS.md`/`CLAUDE.md`, and works with self-hosted Forgejo and Gitea, not only GitHub.
 
+### [workkit](https://github.com/ITW-Creative-Works/workkit)
+`JavaScript + Shell` · `FSL-1.1-MIT` (source-available, not OSI) · Claude Code plugin + CLI · 🟡 active
+
+Claude Code plugin that runs GitHub Issues as the work pipeline: each issue moves through labeled stages from spec to build, QA and ship.
+
+- **Replaces:** Ad-hoc chat-driven coding sessions and hand-kept task lists
+- **Backends:** Claude Code (Anthropic)
+- **Edge:** The chat acts as a manager that dispatches worker subagents for code and tests plus a verifier that reviews both without seeing how they were made. Hooks block a code commit until the full test suite has passed on exactly what is being committed, and finished work waits uncommitted for the human to try it.
+
 ---
 ## Prompt-to-App Builders
 
@@ -565,8 +574,18 @@ Package manager and public registry for reusable AI skills, prompts, rules, MCP 
 
 Installable agent skill and CLI (`@aident-ai/cli`) that teach coding agents to use [Aident Loadout](https://aident.ai) for connected work apps and 400+ ready-made Skills. The skill and CLI are MIT; the Loadout service they call is proprietary (freemium, pay-as-you-go).
 
+- **Replaces:** Manual MCP credentials configuration, fragmented per-agent tool setups
 - **Backends:** Codex, Claude Code, Cursor, OpenCode, OpenClaw and other MCP clients
 - **Edge:** One CLI command installs a single canonical skill copy and repairs every detected filesystem-backed agent host, so all assistants on a machine share the same connected accounts. Credentials stay in a vault (agents receive results, not raw keys), and every action call lands in an audit log.
+
+### [Archcore](https://github.com/archcore-ai/archcore)
+`Go` · `Apache-2.0` · CLI + MCP server + agent plugin · 🟡 active
+
+Git-native context engineering and spec-driven development for AI coding agents.
+
+- **Replaces:** Manual prompt engineering, scattered context docs, unversioned rule files
+- **Backends:** Claude Code, Codex, Cursor and GitHub Copilot
+- **Edge:** The CLI keeps specs, architecture decisions, rules, plans, and project knowledge in `.archcore/`, versioned with your code, and serves the relevant context to coding agents through MCP and integrations.
 
 ---
 
@@ -594,6 +613,13 @@ Reference implementations — filesystem, git, fetch, memory, and dozens of comm
 Local MCP bridge that lets an existing ChatGPT conversation operate the Mac where the developer is already working: shell, unrestricted files, real PTY sessions, background jobs, and read-only Codex history.
 
 - **Edge:** ChatGPT stays the reasoning layer and the bridge makes no model calls. Unlike a narrow filesystem or shell MCP, it is deliberately built for developer-machine parity and real interactive terminals. **Security tradeoff:** it is intentionally not sandboxed and runs with the macOS user's effective permissions, so it is only appropriate when that level of machine access is explicitly wanted.
+
+### [Oh My Android](https://github.com/ateymoori/oh-my-android)
+`Swift` · `MIT` · macOS app / MCP · 🟡 active
+
+Native macOS control panel for the Android Emulator and adb devices, with a built-in stdio MCP server that lets coding agents see and drive the device.
+
+- **Edge:** `screenshot` is scaled to 1 px = 1 dp and `get_ui` returns a compact UI tree with refs (about 10× smaller than raw `uiautomator` XML), so positions match layout code and the agent can tap by ref. The same 18 tools switch dark mode, font scale, locale/RTL, TalkBack and network, and read logcat, SharedPreferences and SQLite, on emulators and USB or Wi-Fi phones; the server is one native binary with no runtime dependencies and no network access. **Known limit:** macOS 26+ on Apple silicon only.
 
 ### [Screenpipe](https://github.com/screenpipe/screenpipe)
 `Rust + TypeScript` · `Screenpipe Commercial License` (source-available, not OSI) · Desktop + MCP + local API · 🟡 active
@@ -984,6 +1010,13 @@ Synthetic data pipelines for SFT and preference tuning, from the Argilla team.
 Train transformer models with reinforcement learning — SFT, DPO, GRPO, reward modeling.
 
 - **Edge:** The standard path from a base model to an aligned, instruction-following one.
+
+### [Fuuga](https://bitbucket.org/thorium/fuuga)
+`F#` · `Unlicense` · `Library + CLI` · 🟡 active
+
+Builds, pre-trains, fine-tunes and serves LLMs in F#/.NET on TorchSharp, with no Python.
+
+- **Edge:** One typed .NET codebase covers the whole pipeline (BPE tokenizer, ingestion, pre-training, LoRA/QLoRA/DPO/GRPO, donor-weight import from Hugging Face safetensors and GGUF, RAG, GGUF export for llama.cpp/Ollama) on CPU or CUDA, so a .NET shop can train and run models offline without a Python stack.
 
 ---
 
