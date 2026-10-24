@@ -557,6 +557,15 @@ Production-oriented framework for composable RAG and agent pipelines.
 
 - **Edge:** Explicit, inspectable pipeline graphs. Strong retriever/ranker ecosystem — favored when search quality is the hard part.
 
+### [System One API](https://github.com/ziyu/system-one-sdk)
+`TypeScript` · `OSS` · 🟡 early (≈2 GitHub stars as of 2026-10)
+
+Multi-provider API and TypeScript SDK (`@system-one-ai/core`) for building AI agents and LLM workflows with swappable model backends.
+
+- **Docs:** https://system-one.dev/en/api
+- **Edge:** Provider-swappable agent/LLM API surface without locking to a single vendor. Early-stage — stars≈2; listing for discoverability, not as a mature peer of LangGraph/CrewAI yet.
+
+
 ---
 
 ## Agent Skills & Package Management
